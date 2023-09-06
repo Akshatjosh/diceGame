@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to right bottom, #7d2d44, #682e66);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 45vh;
+  width: 60%; /* Adjust as needed for mobile screens */
+  min-width: 400px; /* Set a max-width for smaller screens */
+  /* Stack elements vertically on smaller screens */
+}
+
+.player-active .current {
+  opacity: 1;
+}
+.container1,
+.container2 {
+  /* padding-bottom: 20px; */
+  min-height: 45vh;
+  width: 50vw; /* Adjust width for smaller screens */
+}
+
+.container1 {
+  background-color: #d5a5b3;
+}
+
+.container2 {
+  background-color: #ab6e90;
+}
+.player-active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.player1,
+.player2 {
+  gap: 60px;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.current-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current {
+  border: none;
+  height: 80px; /* Adjust height for smaller screens */
+  width: 80px; /* Adjust width for smaller screens */
+  background-color: crimson;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Newgame {
+  height: 100%;
+  position: absolute;
+  margin-left: -60px;
+
+  left: 50%;
+  /* right: 50%; */
+  z-index: 1;
+  margin-top: 1%; /* Adjust margin for spacing between buttons */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px; /* Adjust gap between buttons */
+}
+
+#total-score-1,
+#total-score-2 {
+  font-size: 32px; /* Adjust font size for smaller screens */
+}
+.dice {
+  position: absolute;
+  margin-left: -25px;
+  display: block;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+}
+.hidden {
+  display: none;
+}
+
+#newgame,
+#rolldice,
+#hold {
+  cursor: pointer;
+  border: none;
+  border-radius: 17%;
+  height: 30px; /* Adjust button height for smaller screens */
+  width: 120px; /* Adjust button width for smaller screens */
+}
+#newgame {
+  margin-bottom: 115px;
+}
+#dice {
+  margin-bottom: 25px;
+}
+@media (max-width: 600px) {
+  .box {
+    width: 90%; /* Adjust for even smaller screens */
+  }
+
+  .container1,
+  .container2 {
+    width: 100vw;
+  }
+
+  .current {
+    height: 60px; /* Adjust for very small screens */
+    width: 60px; /* Adjust for very small screens */
+  }
+
+  #total-score-1,
+  #total-score-12 {
+    font-size: 28px; /* Further reduce font size for very small screens */
+  }
+}
